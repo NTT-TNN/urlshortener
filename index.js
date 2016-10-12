@@ -5,7 +5,7 @@ require('dotenv').config({
   silent: true
 });
 var cnt=1;
-var short="http://localhost:3500/";
+var short="https://urlshortener-ntttnn.herokuapp.com/";
 var app=express();
 var u="mongodb://nguyentienthao:lebaochi1809@ds057066.mlab.com:57066/urlshortenner";
 
@@ -38,7 +38,7 @@ app.get('/',function(req,res){
   })
 })
 app.get('/new/:url*',function(req,res){
-  console.log(process.env.APP_URL);
+
     var Obj={};
     var url=req.url.slice(5)
     if(ValidURL(url)){
